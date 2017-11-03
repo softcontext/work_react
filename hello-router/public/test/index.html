@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Hello World</title>
+    <!-- <script src="https://unpkg.com/react@latest/dist/react.js"></script> -->
+    <!-- <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script> -->
+    <!-- <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      ReactDOM.render(
+        React.DOM.h1(null, "Hello World!"),
+        document.getElementById('app') );
+    </script>
+    <script type="text/javascript">
+    var inventory = [
+      {name: 'apples', quantity: 2},
+      {name: 'bananas', quantity: 0},
+      {name: 'cherries', quantity: 5}
+    ];
+
+    function findCherries(fruit) {
+      return fruit.name === 'cherries';
+    }
+
+    console.log(inventory.find(findCherries)); // { name: 'cherries', quantity: 5 }
+    </script>
+  </body>
+</html>
